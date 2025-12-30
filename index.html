@@ -493,29 +493,6 @@ https://www.tooplate.com/view/2117-infinite-loop
   <script src="js/jquery.singlePageNav.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script>
-    const buttons = document.querySelectorAll('.filters button');
-    const cards = document.querySelectorAll('.tm-testimonial-item');
-    
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
-    
-        cards.forEach(card => {
-          const subjects = card.dataset.subject.split(' ');
-    
-          if (filter === 'all' || subjects.includes(filter)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
-  <script>
-
-    
-
     function getOffSet() {
       var _offset = 450;
       var windowHeight = window.innerHeight;
@@ -698,11 +675,36 @@ https://www.tooplate.com/view/2117-infinite-loop
         ]
       });
     });
+  document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.filters button');
+      const cards = document.querySelectorAll('.tm-testimonial-item');
+    
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter;
+    
+          cards.forEach(card => {
+            const subjects = card.dataset.subject ? card.dataset.subject.split(' ') : [];
+            // کارت دیده شود اگر:
+            // 1. filter 'all' است
+            // 2. یا کارت شامل درس انتخاب شده است
+            if (filter === 'all' || subjects.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+</script>
+
 
   </script>
 </body>
 
 </html>
+
 
 
 
