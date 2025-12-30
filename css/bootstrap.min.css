@@ -77,6 +77,11 @@ body {
     text-align: right;
     background-color: #fff
 }
+.filters button {
+  margin: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
 .tm-testimonials-carousel .slick-dots {
   direction: rtl;
   display: flex !important;
