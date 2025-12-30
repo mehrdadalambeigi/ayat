@@ -284,13 +284,15 @@ blockquote {
 .tm-testimonials-content {
   position: relative;
   padding-right: 14px;
+  min-height: 20px;
+  display: block;
   z-index: 100;
 }
 .tm-testimonials-content::before {
   content: "";
-  width: 6px;
-  height: 6px;
-  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  background-color: white;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -709,5 +711,6 @@ p {
     margin: 0;
   }
 }
+
 
 
