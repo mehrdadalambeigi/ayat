@@ -324,9 +324,6 @@ blockquote {
   text-align: right;
   font-style: italic;
   font-size: 1.1rem;
-  border: 1px solid #ddd;
-  padding: 12px;
-  margin: 10px 0;
 }
 
 /* Work */
@@ -706,6 +703,7 @@ p {
     margin: 0;
   }
 }
+
 
 
 
