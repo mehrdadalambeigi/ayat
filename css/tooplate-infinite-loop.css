@@ -298,6 +298,11 @@ blockquote {
   bottom: 0;
   z-index: 0;
 }
+.filters button {
+  margin: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
 
 .tm-testimonials-carousel {
   max-width: 1050px;
@@ -319,6 +324,9 @@ blockquote {
   text-align: right;
   font-style: italic;
   font-size: 1.1rem;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin: 10px 0;
 }
 
 /* Work */
@@ -698,6 +706,7 @@ p {
     margin: 0;
   }
 }
+
 
 
 
