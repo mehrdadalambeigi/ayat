@@ -10038,6 +10038,14 @@ a.text-dark:hover {
   margin-top: 10px;
   font-weight: bold;
 }
+nav.tm-navbar.scroll {
+  background-color: #fff;
+}
+
+nav.tm-navbar.scroll .nav-link,
+nav.tm-navbar.scroll .navbar-brand {
+  color: #000;
+}
 
 
 /*# sourceMappingURL=bootstrap.min.css.map */
