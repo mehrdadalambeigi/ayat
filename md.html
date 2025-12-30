@@ -2,26 +2,49 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+
+    <!-- مهم‌ترین بخش برای موبایل -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>لیست مقالات</title>
+
     <style>
         body {
             font-family: Tahoma, sans-serif;
             direction: rtl;
-            padding: 20px;
+            margin: 0;
+            padding: 15px;
+            background-color: #f9f9f9;
         }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
         ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
+
         li {
-            margin: 8px 0;
+            margin: 10px 0;
         }
+
         a {
+            display: block;              /* برای لمس راحت در موبایل */
+            padding: 12px;
+            background: #ffffff;
+            border-radius: 8px;
             text-decoration: none;
             color: #0066cc;
+            font-size: 1rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
         }
+
         a:hover {
-            text-decoration: underline;
+            background: #eef5ff;
         }
     </style>
 </head>
@@ -31,7 +54,9 @@
 
 <ul>
     <li><a href="MD_files/test.txt" target="_blank">test</a></li>
-    <li><a href="MD_files/تحقیق شهید حسن آیت.docx" target="_blank">تحقیق در مورد شهید حسن آیت</a></li>
+    <li><a href="MD_files/تحقیق شهید حسن آیت.docx" target="_blank">
+        تحقیق در مورد شهید حسن آیت
+    </a></li>
 </ul>
 
 </body>
