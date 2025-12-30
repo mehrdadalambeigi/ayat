@@ -683,33 +683,6 @@ $(document).ready(function(){
     nav: true,
     dots: false
   });
-
-  // 2. ذخیره همه آیتم‌ها
-  const $allItems = $carousel.find('.tm-testimonial-item').clone();
-
-  // 3. کلیک روی دکمه‌ها
-  $('.filters button').click(function(){
-    const filter = $(this).data('filter');
-
-    // خالی کردن carousel
-    $carousel.trigger('replace.owl.carousel', ['']).trigger('refresh.owl.carousel');
-
-    // انتخاب آیتم‌های فیلتر شده
-    let $filteredItems;
-    if(filter === 'all'){
-      $filteredItems = $allItems;
-    } else {
-      $filteredItems = $allItems.filter(function(){
-        const subjects = $(this).data('subject') ? $(this).data('subject').split(' ') : [];
-        return subjects.includes(filter);
-      });
-    }
-
-    // اضافه کردن آیتم‌ها به carousel و refresh
-    $carousel.trigger('replace.owl.carousel', [$filteredItems]).trigger('refresh.owl.carousel');
-  });
-
-});
 </script>
 
 </script>
@@ -719,6 +692,7 @@ $(document).ready(function(){
 </body>
 
 </html>
+
 
 
 
