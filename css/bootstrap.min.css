@@ -77,6 +77,16 @@ body {
     text-align: right;
     background-color: #fff
 }
+.tm-testimonials-carousel .slick-dots {
+  direction: rtl;
+  display: flex !important;
+  justify-content: center;
+}
+
+.tm-testimonials-carousel .slick-dots li {
+  float: none;
+}
+
 
 [tabindex="-1"]:focus {
     outline: 0 !important
