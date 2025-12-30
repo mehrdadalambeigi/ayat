@@ -187,200 +187,152 @@ https://www.tooplate.com/view/2117-infinite-loop
 </head>
 <body>
 
-<section id="testimonials">
-  <div class="filters">
-    <button data-filter="all">همه</button>
-    <button data-filter="math">ریاضی</button>
-    <button data-filter="ph">علوم تجربی</button>
-    <button data-filter="fa">ادبیات</button>
-    <button data-filter="ca">مطالعات</button>
-    <button data-filter="ab">عربی</button>
-    <button data-filter="en">زبان انگلیسی</button>
-    <button data-filter="qo">قرآن</button>
-    <button data-filter="dn">دینی</button>
-    <button data-filter="ho">فرهنگ و هنر</button>
-    <button data-filter="tf">تفکر و پژوهش</button>
-    <button data-filter="sp">تربیت بدنی</button>
-    <button data-filter="oo">آمادگی دفاعی</button>
-    <button data-filter="ko">کار و فناوری</button>
-  </div>
-
-  <div class="tm-testimonials-carousel owl-carousel">
-    <figure class="tm-testimonial-item" data-subject="fa dn">
-      <h4>آقای رجبی خواه</h4>
-      <blockquote>سابقه کار:</blockquote>
-      <blockquote>تحصیلات:</blockquote>
-      <figcaption>دروس: ادبیات و دینی</figcaption>
-    </figure>
-    <figure class="tm-testimonial-item" data-subject="math">
-      <h4>آقای هفت سوارانی</h4>
-      <blockquote>سابقه کار:</blockquote>
-      <blockquote>تحصیلات:</blockquote>
-      <figcaption>درس: ریاضی</figcaption>
-    </figure>
-    <figure class="tm-testimonial-item" data-subject="ph">
-      <h4>آقای صادقی</h4>
-      <blockquote>سابقه کار:</blockquote>
-      <blockquote>تحصیلات:</blockquote>
-      <figcaption>درس: علوم تجربی</figcaption>
-    </figure>
-    <figure class="tm-testimonial-item" data-subject="en">
-      <h4>آقای همتی</h4>
-      <blockquote>سابقه کار:</blockquote>
-      <blockquote>تحصیلات:</blockquote>
-      <figcaption>درس: زبان انگلیسی</figcaption>
-    </figure>
-    <figure class="tm-testimonial-item" data-subject="ab ho">
-      <h4>آقای مهدی آبادی</h4>
-      <blockquote>سابقه کار:</blockquote>
-      <blockquote>تحصیلات:</blockquote>
-      <figcaption>دروس: عربی و فرهنگ و هنر</figcaption>
-    </figure>
-    <figure class="tm-testimonial-item" data-subject="ko dn">
-      <h4>آقای مردانی</h4>
-      <blockquote>سابقه کار:</blockquote>
-      <blockquote>تحصیلات:</blockquote>
-      <figcaption>دروس: کاروفناوری و دینی</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- jQuery و Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-<script>
-$(document).ready(function(){
-  const $carousel = $('.tm-testimonials-carousel');
-
-  // فعال کردن carousel
-  $carousel.owlCarousel({
-    items: 3,
-    margin: 15,
-    nav: true,
-    dots: false,
-    responsive: {
-      0: { items: 1 },
-      768: { items: 2 },
-      992: { items: 3 }
-    }
-  });
-
-  // ذخیره همه آیتم‌ها
-  const $allItems = $carousel.find('.tm-testimonial-item').clone();
-
-  // کلیک روی دکمه‌ها
-  $('.filters button').click(function(){
-    const filter = $(this).data('filter');
-
-    // خالی کردن carousel
-    $carousel.trigger('replace.owl.carousel', ['']).trigger('refresh.owl.carousel');
-
-    // انتخاب آیتم‌های فیلتر شده
-    let $filteredItems;
-    if(filter === 'all'){
-      $filteredItems = $allItems;
-    } else {
-      $filteredItems = $allItems.filter(function(){
-        const subjects = $(this).data('subject') ? $(this).data('subject').split(' ') : [];
-        return subjects.includes(filter);
-      });
-    }
-
-    // اضافه کردن آیتم‌های فیلتر شده و refresh
-    $carousel.trigger('replace.owl.carousel', [$filteredItems]).trigger('refresh.owl.carousel');
-  });
-});
-</script>
-
-</body>
-</html>
-
-    <section>
-    </section>
-  <section id="gallery" class="tm-section-pad-top">
-    <div class="container tm-container-gallery">
+ <section id="testimonials" class="tm-section-pad-top tm-parallax-2">
+    <div class="filters">
+      <button data-filter="all">همه</button>
+      <button data-filter="math">ریاضی</button>
+      <button data-filter="ph">علوم تجربی</button>
+      <button data-filter="fa">ادبیات</button>
+      <button data-filter="ca">مطالعات</button>
+      <button data-filter="ab">عربی</button>
+      <button data-filter="en">زبان اینگلیسی</button>
+      <button data-filter="qo">قرآن</button>
+      <button data-filter="dn">دینی</button>
+      <button data-filter="ho">فرهنگ و هنر</button>
+      <button data-filter="tf">تفکر و پژوهش</button>
+      <button data-filter="sp">تربیت بدنی</button>
+      <button data-filter="oo">آمادگی دفاعی</button>
+      <button data-filter="ko">کار و فناوری</button>
+    </div>
+    <div class="container tm-testimonials-content">
       <div class="row">
-        <div class="text-center col-12">
-          <h2 class="tm-text-primary tm-section-title mb-4">محیط مدرسه</h2>
-          <p class="mx-auto tm-section-desc">
-           <strong>عکس هایی از محیط آرامش بخش و زیبا</strong>
+        <div class="col-lg-12 tm-content-box">
+          <h2 class="text-white text-center mb-4 tm-section-title">اساتید</h2>
+          <p class="mx-auto tm-section-desc text-center">
+            <strong>اساتیدی ماهر و مجرب برای تدریسی بهتر در این مدرسه</strong>
           </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="mx-auto tm-gallery-container">
-            <div class="grid tm-gallery">
-              <a href="img/gallery-img-01.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Physical Health <span>Exercise!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-02.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-02.jpg" alt="Image 2" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Rain on Glass <span>Second Image</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-03.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-03.jpg" alt="Image 3" class="img-fluid">
-                  <figcaption>
-                    <h2><i><span>Sea View</span> Mega City</i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-04.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Dream Girl <span>Thoughts</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-05.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-05.jpg" alt="Image 5" class="img-fluid">
-                  <figcaption>
-                    <h2><i><span>Workstation</span> Offices</i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-06.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-06.jpg" alt="Image 6" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Just Above <span>The City</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-01.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-01.jpg" alt="Image 7" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Another <span>Exercise Time</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-02.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-02.jpg" alt="Image 8" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Repeated <span>Image Spot</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
+          <div class="mx-auto tm-gallery-container tm-gallery-container-2">
+            <div class="tm-testimonials-carousel owl-carousel">
+              <figure class="tm-testimonial-item" data-subject="fa dn">
+                <h4>آقای رجبی خواه</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>دروس:ادبیات و دینی</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="fa">
+                <h4>آقای غفارپور</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:ادبیات</figcaption>
+              </figure>
+
+              <figure class="tm-testimonial-item" data-subject="ca">
+                <h4>آقای خانزاده</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:مطالعات اجتماعی</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="math">
+                <h4>آقای هفت سوارانی</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:ریاضی</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="math">
+                <h4>آقای مزرعه</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:ریاضی</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="ph">
+                <h4>آقای صادقی</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:علوم تجربی</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="en">
+              <h4>آقای همتی</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:زبان اینگلیسی</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="ab ho">
+              <h4>آقای مهدی آبادی</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>دروس:زبان عربی و فرهنگ و هنر</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="ko dn">
+              <h4>آقای مردانی</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>دروس:کاروفناوری و دینی</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="ko">
+              <h4>آقای دوج</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:کاروفناوری</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="oo qo">
+              <h4>آقای عزیزی</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>دروس:آمادگی دفاعی و قرآن</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="sp">
+              <h4>آقای زنده کار</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>درس:تربیت بدنی</figcaption>
+              </figure>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="tm-bg-overlay"></div>
+     <div class="container tm-testimonials-content">
+      <div class="row">
+        <div class="col-lg-12 tm-content-box">
+          <h2 class="text-white text-center mb-4 tm-section-title">کادر اجرایی</h2>
+          <p class="mx-auto tm-section-desc text-center">
+            <strong>و به همراه کادر اجرایی با تجربه</strong>
+          </p>
+          <div class="mx-auto tm-gallery-container tm-gallery-container-2">
+            <div class="tm-testimonials-carousel owl-carousel">
+              <figure class="tm-testimonial-item">
+              <h4>آقای سعید</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>مدیر مدرسه</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="qo tf">
+              <h4>آقای حاجی</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>معاون اجرایی مدرسه</figcaption>
+                <figcaption>دروس:قرآن و تفکروپژوهش</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="ho tf">
+              <h4>آقای انصاری</h4>
+                <blockquote>سابقه کار:</blockquote>
+                <blockquote>تحصیلات:</blockquote>
+                <figcaption>معاون پرورشی مدرسه</figcaption>
+                <figcaption>دروس:فرهنگ و هنر و تفکر و پژوهش</figcaption>
+              </figure>
+              <figure class="tm-testimonial-item" data-subject="qo tf">
+              <h4>آقای مهدی شهبازی شکیب</h4>
+                <blockquote>سابقه کار:بیش از 20 سال سابقه</blockquote>
+                <blockquote>تحصیلات:دارای مدرک کارشناسی روانشناسی بالینی</blockquote>
+                <figcaption>مشاور تحصیلی مدرسه</figcaption>
+                <figcaption>دروس:قرآن و تفکر و پژوهش</figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tm-bg-overlay"></div>
   </section>
 
   <section id="hassan" class="tm-section-pad-top">
@@ -692,6 +644,7 @@ $(document).ready(function(){
 </body>
 
 </html>
+
 
 
 
