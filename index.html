@@ -580,6 +580,11 @@
       $('#tmNav .nav-link:not(.dropdown-toggle)').on('click', function () {
         $('.navbar-collapse').removeClass('show');
       });
+      // Close mobile menu when clicking dropdown items
+      $('.dropdown-menu .dropdown-item').on('click', function () {
+        $('.navbar-collapse').removeClass('show');
+      });
+
 
       // Scroll to corresponding section with animation
       $('#tmNav').singlePageNav({
@@ -680,6 +685,7 @@
 </body>
 
 </html>
+
 
 
 
