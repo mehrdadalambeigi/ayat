@@ -481,13 +481,15 @@
 
   </section>
 
-  <script src="js/jquery-1.9.1.min.js"></script>
-  <script src="slick/slick.min.js"></script>
-  <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
-  <script src="js/easing.min.js"></script>
-  <script src="js/jquery.singlePageNav.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/popper.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="slick/slick.min.js"></script>
+<script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="js/easing.min.js"></script>
+<script src="js/jquery.singlePageNav.min.js"></script>
+
 
   <script>
 
@@ -575,9 +577,9 @@
       });
 
       // Close mobile menu after click 
-      $('#tmNav a').on('click', function () {
+      $('#tmNav .nav-link:not(.dropdown-toggle)').on('click', function () {
         $('.navbar-collapse').removeClass('show');
-      })
+      });
 
       // Scroll to corresponding section with animation
       $('#tmNav').singlePageNav({
@@ -678,6 +680,7 @@
 </body>
 
 </html>
+
 
 
 
