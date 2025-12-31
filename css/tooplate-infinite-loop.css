@@ -525,7 +525,7 @@ figure.effect-honey:hover h2 i {
 
 #contact {
   color: white;
-  background-color: #001828;
+  background-color: #222;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 980px;
@@ -731,6 +731,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
