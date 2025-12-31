@@ -84,6 +84,9 @@ blockquote {
   right: 0;
   left: auto;
 }
+.dropdown-menu.show {
+  display: block;
+}
 @media (min-width: 992px) {
   .nav-item.dropdown:hover .dropdown-menu {
     display: block;
@@ -743,6 +746,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
