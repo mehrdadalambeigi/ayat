@@ -84,6 +84,11 @@ blockquote {
   right: 0;
   left: auto;
 }
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
 
 
 /* Navbar */
@@ -738,6 +743,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
