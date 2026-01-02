@@ -5,12 +5,25 @@ Tooplate 2117 Infinite Loop
 https://www.tooplate.com/view/2117-infinite-loop
 
 */
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400; /* وزن عادی */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700; /* وزن بولد */
+  font-style: normal;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
 
 body {
-	font-family: "Raleway", sans-serif;
-	font-size: 1.2em;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.2em;
   color: #707070;
   margin: 0;
   padding: 0;
@@ -731,6 +744,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
